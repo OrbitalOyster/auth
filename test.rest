@@ -1,0 +1,51 @@
+### Get public key
+GET http://localhost:8081/pk
+
+### Get refresh token (login)
+POST http://localhost:8081/rt
+Content-type: application/json
+
+{
+  "username": "USERNAME",
+  "password": "PASSWORD"
+}
+
+### Get access token
+GET http://localhost:8081/at
+Cookie: rt=RTOKEN
+
+### Logout
+POST http://localhost:8081/lo
+Cookie: rt=RTOKEN
+
+### Get all users
+GET http://localhost:8081/users
+Cookie: at=ATOKEN
+
+### Get admin profile
+GET http://localhost:8081/users/USERNAME
+Cookie: at=ATOKEN
+
+### Register new user
+POST http://localhost:8081/users
+Cookie: at=ATOKEN
+Content-type: application/json
+
+{
+  "username": "USERNAME",
+  "password": "PASSWORD",
+  "p": 1
+}
+
+### Edit user
+PATCH http://localhost:8081/users/USER_ID
+Cookie: at=ATOKEN
+Content-type: application/json
+
+{
+  "password": "PASSWORD"
+}
+
+### Remove user
+DELETE http://localhost:8081/users/USER_ID
+Cookie: at=ATOKEN

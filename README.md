@@ -14,8 +14,10 @@ Simple authentication server based on JWT with RS256 encryption. Supports basic 
 
 1. Run following commands:
 
-```
-git clone https://github.com/OrbitalOyster/auth
+```bash
+mkdir auth
+cd auth
+git clone https://github.com/OrbitalOyster/auth .
 npm install
 npm run tsc
 ```

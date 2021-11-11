@@ -19,7 +19,6 @@ mkdir auth
 cd auth
 git clone https://github.com/OrbitalOyster/auth .
 npm install
-npm run tsc
 ```
 
 2. Copy or generate new RS256 key pair.

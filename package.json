@@ -13,7 +13,6 @@
   "type": "module",
   "types": "types",
   "scripts": {
-    "postinstall": "npm run tsc",
     "tsc": "echo \"Compiling...\" && tsc && echo \"Done\"",
     "lint": "echo \"Linting...\" && eslint src --ext .ts && echo \"Done\"",
     "fix-lint": "echo \"Fixing code...\" && eslint src --ext .ts --fix && echo \"Done\"",
